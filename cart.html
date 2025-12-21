@@ -1,6 +1,25 @@
-<h2>سبد خرید</h2>
-<dive id = "cart-items"></dive>
-<h3 id = "total-price"></h3>
-<button onclick="checkout()">تایید نهایی</button>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>سبد خرید</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h2>سبد خرید شما</h2>
+        <a href="index.html" style="color:white; text-decoration:none;">ادامه خرید</a>
+    </header>
 
-<script src = "js/cart.js"></script>
+    <div class="cart-page-container">
+        <div id="cart-items"></div>
+        
+        <div class="total-section">
+            <h3 id="total-price"></h3>
+            <button onclick="checkout()" style="width:100%; margin-top:20px;">تایید نهایی و پرداخت</button>
+        </div>
+    </div>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

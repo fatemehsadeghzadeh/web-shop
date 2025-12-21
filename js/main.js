@@ -24,4 +24,18 @@ products.forEach(product =>{
   
 });
 updateCartCount();
+
+}
+function searchProducts() {
+    const term = document.getElementById("search-input").value.toLowerCase();
+    const cards = document.querySelectorAll(".product-card");
+
+    cards.forEach(card => {
+        const title = card.querySelector("h3").innerText.toLowerCase();
+        if (title.includes(term)) {
+            card.style.display = "flex"; // نمایش
+        } else {
+            card.style.display = "none"; // مخفی کردن
+        }
+    });
 }

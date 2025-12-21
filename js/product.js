@@ -34,4 +34,5 @@ function addToCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
     alert("محصول به سبد خرید اضافه شد!");
 }
-این الان product.js
+
+

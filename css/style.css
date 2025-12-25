@@ -310,3 +310,58 @@ cart-item {
         align-items: flex-start;
     }
 }
+
+
+/* استایل جدید برای بخش سبد خرید در هدر */
+header {
+    display: flex;
+    justify-content: space-between; /* پخش کردن عنوان و سبد خرید در دو طرف */
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.cart-link {
+    display: flex;
+    align-items: center;
+    background: #ef4056; /* رنگ قرمز دیجی‌کالایی */
+    padding: 8px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: 0.3s;
+}
+
+.cart-link:hover {
+    background: #c62828;
+}
+
+.cart-text {
+    font-weight: bold;
+    margin-left: 10px; /* فاصله از عدد */
+}
+
+#cart-count {
+    background: white;
+    color: #ef4056;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* دایره‌ای کردن عدد */
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* اگر در موبایل هستید، هدر به هم نریزد */
+@media (max-width: 480px) {
+    header h2 {
+        font-size: 1.1rem;
+    }
+    .cart-text {
+        display: none; /* در موبایل فقط آیکون و عدد بماند */
+    }
+}
+

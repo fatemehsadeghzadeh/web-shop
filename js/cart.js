@@ -51,3 +51,23 @@ function removeItem(index) {
 }
 
 renderCart();
+
+// تابع برای تایید نهایی و پرداخت
+function checkout() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (cart.length === 0) {
+        alert("سبد خرید شما خالی است!");
+        return;
+    }
+
+    // نمایش پیام موفقیت
+    alert("سفارش شما با موفقیت ثبت شد! ممنون از خرید شما.");
+
+    // خالی کردن سبد خرید پس از پرداخت
+    localStorage.removeItem("cart");
+
+    // بروزرسانی صفحه برای نمایش سبد خالی
+    renderCart();
+}
+

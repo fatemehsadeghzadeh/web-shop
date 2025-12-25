@@ -355,6 +355,53 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
+/* ظرف کلی دکمه سبد خرید */
+.cart-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #333; /* رنگ پس‌زمینه تیره هدر */
+    padding: 8px 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    border: 1px solid #444;
+}
+
+.cart-container:hover {
+    background-color: #444;
+}
+
+/* بخش آیکون و عدد */
+.cart-icon-wrapper {
+    position: relative; /* مهم برای قرارگیری عدد روی آیکون */
+    font-size: 24px; /* بزرگتر کردن آیکون سبد */
+}
+
+/* دایره قرمز نشان‌دهنده تعداد */
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #ef4056; /* قرمز روشن */
+    color: white;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: 2px solid #333; /* ایجاد فاصله با پس‌زمینه */
+}
+
+.cart-label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
 /* اگر در موبایل هستید، هدر به هم نریزد */
 @media (max-width: 480px) {
     header h2 {
@@ -364,4 +411,5 @@ header {
         display: none; /* در موبایل فقط آیکون و عدد بماند */
     }
 }
+
 

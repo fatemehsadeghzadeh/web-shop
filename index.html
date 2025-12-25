@@ -7,13 +7,15 @@
     <body>
 
 
-       <header>
-           <h2>لیست محصولات</h2>
-           <a href="cart.html" class="cart-link">
-              <span class="cart-text">🛒 سبد خرید</span>
-              <span id="cart-count">0</span>
-           </a>
-        </header>
+   <header>
+      <h2>لیست محصولات</h2>
+      <a href="cart.html" class="cart-container">
+           <div class="cart-icon-wrapper">
+              🛒 <span id="cart-count">0</span>
+           </div>
+           <span class="cart-label">سبد خرید</span>
+       </a>
+   </header>
         
         <div class="search-container">
         <input type="text" id="search-input" placeholder="جستجوی لپ‌تاپ..." onkeyup="searchProducts()">
@@ -25,4 +27,5 @@
     </body>
 
 </html>
+
 

@@ -181,27 +181,6 @@ cart-item {
 
 
 
-/* جلوگیری از افتادن متن و دکمه روی عکس در صفحه محصول */
-#product-detail {
-    align-items: flex-start;
-}
 
-.product-images-side {
-    position: relative;
-}
 
-.product-info-side {
-    position: relative;
-    background: white;
-    padding: 10px 0;
-    z-index: 1;
-}
-
-/* فاصله منطقی بین متن و دکمه */
-.product-info-side h1,
-.product-info-side p,
-.product-info-side .price-tag,
-.product-info-side button {
-    margin-bottom: 15px;
-}
 

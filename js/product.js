@@ -8,21 +8,16 @@ if (product) {
             <div class="main-image">
                 <img src="${product.images[0]}" id="main-img" alt="${product.name}">
             </div>
+            <div class="gallery">
+                ${product.images.map(img => `<img src="${img}" onclick="document.getElementById('main-img').src='${img}'" style="cursor:pointer;">`).join("")}
+            </div>
         </div>
-
-        <div class="gallery">
-            ${product.images.map(img => `
-                <img src="${img}" onclick="document.getElementById('main-img').src='${img}'" alt="gallery-thumb">
-            `).join("")}
-        </div>
-
         <div class="product-info-side">
             <h1>${product.name}</h1>
-            <p class="product-description">${product.description}</p>
-            
-            <div class="purchase-box">
+            <p>${product.description}</p>
+            <div style="display: flex; align-items: center; gap: 20px; margin-top: 20px;">
                 <span class="price-tag">${product.price.toLocaleString()} تومان</span>
-                <button onclick="addToCart()" class="btn-add-cart">افزودن به سبد خرید</button>
+                <button onclick="addToCart()" class="btn-add-cart" style="margin-top:0; width:auto;">افزودن به سبد خرید</button>
             </div>
         </div>
     `;
